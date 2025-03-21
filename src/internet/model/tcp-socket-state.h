@@ -31,7 +31,16 @@ namespace ns3
  */
 class TcpSocketState : public Object
 {
-  public:git remote add origin https://github.com/Abhiji-th/ns3.gitate Constructor
+  public:
+    /**
+     * Get the type ID.
+     * @brief Get the type ID.
+     * @return the object TypeId
+     */
+    static TypeId GetTypeId();
+
+    /**
+     * @brief TcpSocketState Constructor
      */
     TcpSocketState()
         : Object()
