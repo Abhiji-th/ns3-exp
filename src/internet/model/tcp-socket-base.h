@@ -612,6 +612,19 @@ class TcpSocketBase : public TcpSocket
      */
     bool IsEct(TcpPacketType_t packetType) const;
 
+    // New methods for EcnMode
+    /**
+     * \brief Set the ECN mode for this socket
+     * \param mode The ECN mode to set
+     */
+    void SetEcnMode(TcpSocketState::EcnMode_t mode);
+
+    /**
+     * \brief Get the current ECN mode for this socket
+     * \return The current ECN mode
+     */
+    TcpSocketState::EcnMode_t GetEcnMode() const;
+
     // Necessary implementations of null functions from ns3::Socket
     SocketErrno GetErrno() const override;     // returns m_errno
     SocketType GetSocketType() const override; // returns socket type
